@@ -6,7 +6,7 @@
     "light": "/assets/images/logo-light.svg",
     "dark": "/assets/images/logo-dark.svg"
   },
-  "favicon": "/assets/images/favicon.png",
+  "favicon": "/assets/images/favicon.svg",
   "colors": {
     "primary": "#0078D4",
     "light": "#50E3C2",
@@ -18,58 +18,68 @@
       "url": "mailto:seu-email@example.com"
     }
   ],
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentação",
-        "groups": [
-          {
-            "group": "Comece Aqui",
-            "pages": [
-              "docs/introduction/overview"
-            ]
-          },
-          {
-            "group": "Microsoft Entra ID",
-            "pages": [
-              "docs/entra-id/overview",
-              "docs/entra-id/users-and-groups",
-              "docs/entra-id/conditional-access",
-              "docs/entra-id/identity-governance"
-            ]
-          },
-          {
-            "group": "Microsoft Graph API",
-            "pages": [
-              "docs/graph-api/introduction",
-              "docs/graph-api/authentication",
-              "docs/graph-api/common-queries"
-            ]
-          },
-          {
-            "group": "PowerShell para IAM",
-            "pages": [
-              "docs/powershell/graph-sdk-setup",
-              "docs/powershell/managing-users",
-              "docs/powershell/managing-groups"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Artigos e Insights",
-        "groups": [
-          {
-            "group": "Artigos",
-            "pages": [
-              "articles/index",
-              "articles/your-first-article-slug"
-            ]
-          }
-        ]
-      }
-    ]
+  "topbarCtaButton": {
+    "name": "Começar",
+    "url": "/docs"
   },
+  "navigation": [
+    {
+      "group": "Introdução",
+      "pages": [
+        "introduction"
+      ]
+    },
+    {
+      "group": "Documentação",
+      "pages": [
+        "docs/index",
+        {
+          "group": "Microsoft Entra ID",
+          "pages": [
+            "docs/entra-id/overview",
+            "docs/entra-id/users-and-groups",
+            "docs/entra-id/conditional-access",
+            "docs/entra-id/identity-governance"
+          ]
+        },
+        {
+          "group": "Microsoft Graph API",
+          "pages": [
+            "docs/graph-api/introduction",
+            "docs/graph-api/authentication",
+            "docs/graph-api/common-queries"
+          ]
+        },
+        {
+          "group": "PowerShell para IAM",
+          "pages": [
+            "docs/powershell/graph-sdk-setup",
+            "docs/powershell/managing-users",
+            "docs/powershell/managing-groups"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Princípios",
+      "pages": [
+        "principles/index",
+        "principles/identity-basics"
+      ]
+    },
+    {
+      "group": "Projetos",
+      "pages": [
+        "projects/index"
+      ]
+    },
+    {
+      "group": "Artigos",
+      "pages": [
+        "articles/index"
+      ]
+    }
+  ],
   "footerSocials": {
     "github": "https://github.com/seu-usuario/seu-repo",
     "linkedin": "https://linkedin.com/in/seu-perfil"

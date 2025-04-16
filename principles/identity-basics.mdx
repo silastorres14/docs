@@ -1,0 +1,76 @@
+---
+title: 'O que é Identidade e Acesso'
+description: 'Conceitos fundamentais de Identidade e Gestão de Acesso no contexto Microsoft'
+---
+
+# O que é Identidade e Acesso
+
+A identidade é o novo perímetro de segurança no mundo digital moderno. À medida que as organizações adotam cada vez mais serviços em nuvem e modelos de trabalho híbridos, a identidade torna-se o ponto crucial de controlo para proteger pessoas, aplicações e dados.
+
+<div className="flex items-center p-4 mb-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
+  <img src="/assets/icons/identity.svg" alt="Identidade" className="h-12 w-12 mr-4" />
+  <div>
+    <strong>Identidade Digital</strong> é a representação única de uma entidade (pessoa, aplicação ou dispositivo) dentro de um sistema, que permite autenticação e autorização a recursos.
+  </div>
+</div>
+
+## Componentes Básicos da Identidade
+
+A gestão de identidade e acesso no ecossistema Microsoft assenta em três componentes fundamentais:
+
+<Steps>
+  <Step title="Identidade">
+    Representa quem você é - um utilizador, grupo, aplicação ou dispositivo. No Microsoft Entra ID, cada identidade tem um identificador único (ObjectID) e um conjunto de atributos que a caracterizam.
+  </Step>
+  <Step title="Autenticação">
+    Verifica se você é quem diz ser. Envolve a validação de credenciais (passwords, certificados, tokens) contra uma autoridade. No Entra ID, inclui métodos como passwords, autenticação multifator (MFA), autenticação passwordless e muito mais.
+  </Step>
+  <Step title="Autorização">
+    Determina o que você tem permissão para fazer após ser autenticado. No ecossistema Microsoft, é gerido através de uma combinação de atribuições de funções, políticas de acesso condicional e permissões granulares a recursos.
+  </Step>
+</Steps>
+
+## Identidade como Perímetro de Segurança
+
+No modelo tradicional, as organizações dependiam de firewalls e VPNs para criar um perímetro de segurança em torno dos recursos corporativos. Hoje, com a adoção da nuvem e trabalho remoto, esse perímetro está dissolvido.
+
+<Warning>
+  78% das violações de segurança relacionadas com identidade envolvem acesso privilegiado comprometido, segundo relatórios recentes.
+</Warning>
+
+O Microsoft Entra ID (anteriormente Azure AD) foi desenvolvido para ser o sistema de controlo de identidade e acesso para este novo mundo, fornecendo:
+
+- **Diretório como Serviço**: Um diretório centralizado na nuvem
+- **Gestão de Identidade**: Ciclo de vida completo de utilizadores e grupos
+- **Gestão de Acesso**: Controlo baseado em políticas para aplicações e dados
+- **Proteção de Identidade**: Deteção de riscos e ameaças em tempo real
+
+## Identidade Híbrida na Microsoft
+
+A realidade da maioria das organizações é um ambiente híbrido, com identidades geridas tanto localmente (on-premises) quanto na nuvem:
+
+<Tabs>
+  <Tab title="Microsoft Entra ID">
+    Serviço de identidade baseado na nuvem que atua como o principal sistema de gestão de identidades para Microsoft 365, Azure e milhares de aplicações SaaS e on-premises integradas.
+  </Tab>
+  <Tab title="Active Directory (AD)">
+    Sistema tradicional de diretório on-premises que tem sido a base da gestão de identidades em ambientes Windows por décadas.
+  </Tab>
+  <Tab title="Entra Connect">
+    Ferramenta que sincroniza identidades entre o AD on-premises e o Entra ID, permitindo single sign-on e coerência de identidades entre ambientes.
+  </Tab>
+</Tabs>
+
+## Princípios de Segurança de Identidade
+
+Ao desenhar uma arquitetura de identidade moderna, considere estes princípios fundamentais:
+
+1. **Autenticação Forte**: Exigir múltiplos fatores de autenticação, especialmente para acessos sensíveis.
+2. **Princípio do Menor Privilégio**: Conceder apenas os acessos mínimos necessários para cumprir uma função.
+3. **Verificação Contínua**: Reavaliar constantemente o risco e a confiança, em vez de confiar apenas na autenticação inicial.
+4. **Proteção contra Ameaças**: Implementar deteção de anomalias e resposta automática a comportamentos suspeitos.
+5. **Gestão de Ciclo de Vida**: Automatizar provisionamento, alterações e desprovisionamento de acessos.
+
+<Card title="Próximo: Autenticação vs. Autorização" icon="arrow-right" href="/principles/authn-vs-authz">
+  Compreenda as diferenças fundamentais entre estes dois conceitos cruciais de segurança.
+</Card> 

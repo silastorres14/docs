@@ -1,32 +1,51 @@
-# Mintlify Starter Kit
+# Guia de Gestão de Identidade Microsoft
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+Este repositório contém a documentação abrangente sobre Gestão de Identidade e Acesso (IAM) utilizando tecnologias Microsoft, incluindo Microsoft Entra ID (anteriormente Azure AD), Microsoft Graph API e PowerShell.
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
-
-### Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+## Estrutura do Projeto
 
 ```
-npm i -g mintlify
+├── docs/                # Conteúdo técnico e how-to
+│   └── index.mdx        # Página inicial da seção Docs
+│   ├── entra-id/        # Documentação sobre Microsoft Entra ID
+│   ├── graph-api/       # Documentação sobre Microsoft Graph API
+│   └── powershell/      # Documentação sobre PowerShell para IAM
+├── principles/          # Conceitos, definições, fundamentos
+│   └── index.mdx        # Página inicial da seção Principles
+├── projects/            # Estudos de caso, exemplos práticos, implementações
+│   └── index.mdx        # Página inicial da seção Projects
+├── articles/            # Posts, notícias, atualizações, insights
+│   └── index.mdx        # Página inicial da seção Articles
+└── assets/              # Arquivos estáticos
+    ├── images/          # Imagens gerais
+    └── icons/           # Ícones SVG para navegação e ilustrações
 ```
 
-Run the following command at the root of your documentation (where docs.json is)
+## Desenvolvimento Local
 
-```
-mintlify dev
-```
+Para trabalhar com esta documentação localmente, siga estas etapas:
 
-### Publishing Changes
+1. Clone este repositório:
+   ```bash
+   git clone [URL_DO_REPOSITÓRIO]
+   ```
 
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+2. Instale o CLI do Mintlify:
+   ```bash
+   npm install -g mintlify
+   ```
 
-#### Troubleshooting
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   mintlify dev
+   ```
 
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `docs.json`
+4. Acesse a documentação no navegador em [http://localhost:3000](http://localhost:3000).
+
+## Contribuição
+
+Contribuições são bem-vindas! Consulte nossas diretrizes de contribuição para mais detalhes.
+
+## Licença
+
+Este projeto está licenciado sob [INSERIR LICENÇA].

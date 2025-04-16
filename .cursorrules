@@ -4,6 +4,7 @@ Diretriz (Rule) para Criação de Documentação em Mintlify: Gestão de Identid
 
 Objetivo Principal: Gerar documentação clara, precisa, prática e bem estruturada sobre Gestão de Identidade e Acesso (IAM) utilizando tecnologias Microsoft, formatada especificamente para a plataforma Mintlify. O conteúdo deve ser relevante para administradores de TI, desenvolvedores e profissionais de segurança.
 
+Idiomas: Utilizar o Português de Portugal em textos, comentários, exceto em linguagens e comandos que deve permanecer de acordo com o comando na sua linguagem própria ou inglês.
 Público-Alvo da Documentação: Profissionais de TI (Administradores de Sistemas, Engenheiros de Nuvem), Desenvolvedores, Engenheiros de Segurança, Engenheiros de DevOps que trabalham com o ecossistema Microsoft 365 e Azure.
 
 Tópicos Centrais a Cobrir:
