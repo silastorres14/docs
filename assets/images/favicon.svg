@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo do ícone -->
+  <rect x="0" y="0" width="32" height="32" rx="6" fill="#0078D4"/>
+  
+  <!-- Símbolo de identidade (fingerprint estilizado) -->
+  <path d="M8 16C8 11.6 11.6 8 16 8C20.4 8 24 11.6 24 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M11 16C11 13.2 13.2 11 16 11C18.8 11 21 13.2 21 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 16C14 14.9 14.9 14 16 14C17.1 14 18 14.9 18 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg> 
