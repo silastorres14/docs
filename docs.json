@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Guia de Gestão de Identidade Microsoft",
+  "theme": "mint",
   "logo": {
     "light": "/assets/images/logo-light.svg",
     "dark": "/assets/images/logo-dark.svg"
