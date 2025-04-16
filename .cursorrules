@@ -1,0 +1,171 @@
+Okay, aqui está um conjunto de diretrizes ("rule") para uma IA assistente criar documentação sobre Gestão de Identidade com foco em ferramentas Microsoft (Entra ID, Graph, PowerShell) para a plataforma Mintlify.
+
+Diretriz (Rule) para Criação de Documentação em Mintlify: Gestão de Identidade Microsoft
+
+Objetivo Principal: Gerar documentação clara, precisa, prática e bem estruturada sobre Gestão de Identidade e Acesso (IAM) utilizando tecnologias Microsoft, formatada especificamente para a plataforma Mintlify. O conteúdo deve ser relevante para administradores de TI, desenvolvedores e profissionais de segurança.
+
+Público-Alvo da Documentação: Profissionais de TI (Administradores de Sistemas, Engenheiros de Nuvem), Desenvolvedores, Engenheiros de Segurança, Engenheiros de DevOps que trabalham com o ecossistema Microsoft 365 e Azure.
+
+Tópicos Centrais a Cobrir:
+
+Conceitos Fundamentais de IAM:
+
+O que é Identidade e Acesso?
+
+Autenticação vs. Autorização.
+
+Princípio do Menor Privilégio.
+
+Identidade Híbrida.
+
+Zero Trust.
+
+Microsoft Entra ID (Anteriormente Azure AD):
+
+Visão Geral: O que é, arquitetura básica.
+
+Gerenciamento de Usuários e Grupos (criação, tipos, dinâmicos).
+
+Autenticação (MFA, Passwordless, SSPR, Políticas de Acesso Condicional).
+
+Gerenciamento de Dispositivos (Registro, Junção, Híbrido).
+
+Aplicativos Empresariais e Registros de Aplicativos (OAuth 2.0, OpenID Connect, SAML).
+
+Identity Governance (Revisões de Acesso, Privileged Identity Management - PIM, Gerenciamento de Direitos).
+
+Monitoramento e Relatórios (Logs de Auditoria, Logs de Entrada).
+
+Entra Connect (Sincronização de diretório).
+
+Boas Práticas de Segurança.
+
+Microsoft Graph API:
+
+Introdução: O que é, por que usar.
+
+Autenticação e Autorização (Tipos de permissão: Delegada vs. Aplicativo).
+
+Ferramentas: Graph Explorer.
+
+Endpoints Comuns para IAM (Usuários, Grupos, Aplicativos, Políticas de Acesso Condicional, PIM).
+
+Exemplos práticos de requisições (GET, POST, PATCH, DELETE).
+
+Tratamento de erros e paginação.
+
+PowerShell:
+
+Módulo Microsoft.Graph.PowerShell (SDK do Graph PowerShell):
+
+Instalação e Conexão (Connect-MgGraph).
+
+Gerenciamento de Escopos/Permissões.
+
+Cmdlets essenciais para gerenciar Usuários, Grupos, Aplicativos, etc. (Get-MgUser, New-MgGroup, Update-MgApplication).
+
+Filtragem e Seleção de dados.
+
+Scripts práticos para automação de tarefas comuns de IAM.
+
+(Opcional/Contextual) Módulo AzureAD / MSOnline (Legado): Mencionar brevemente para contextualização ou tarefas específicas ainda não totalmente cobertas pelo SDK do Graph, mas enfatizar a preferência pelo Microsoft.Graph.
+
+Tutoriais e Casos de Uso:
+
+Cenários práticos ponta a ponta (Ex: Onboarding de novo usuário com atribuições específicas via script, Configuração de Acesso Condicional para um aplicativo, Revisão de acesso de um grupo privilegiado).
+
+Troubleshooting comum.
+
+Diretrizes de Estrutura e Formatação (Mintlify):
+
+Estrutura Lógica:
+
+Use a estrutura de navegação lateral (sidebar) do Mintlify para organizar os tópicos principais (ex: "Introdução", "Entra ID", "Microsoft Graph API", "PowerShell", "Tutoriais").
+
+Dentro de cada tópico principal, crie subpáginas para tópicos específicos (ex: dentro de "Entra ID", ter páginas para "Usuários e Grupos", "Acesso Condicional", etc.).
+
+Comece com conceitos, avance para configurações e gerenciamento, e finalize com automação e exemplos práticos.
+
+Sintaxe Mintlify e Markdown:
+
+Títulos: Use # (H1 - Título da Página), ## (H2 - Seção Principal), ### (H3 - Subseção) de forma consistente. O título da página (H1) geralmente é definido pela configuração do Mintlify.
+
+Blocos de Código: Essencial para PowerShell, JSON (Graph API), etc. Use ``` seguido pelo identificador da linguagem (ex: powershell, `json`, `bash`, `http`).
+
+# Exemplo de Bloco de Código PowerShell
+Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"
+Get-MgUser -Filter "startswith(displayName,'Admin')" | Select-Object Id, DisplayName, UserPrincipalName
+
+
+Callouts / Avisos: Use os componentes de Callout do Mintlify para destacar informações importantes. A sintaxe pode variar, mas geralmente se assemelha a:
+
+> **Note**
+> Informação adicional ou observação.
+
+> **Tip**
+> Dica útil ou boa prática.
+
+> **Important**
+> Informação crucial que não deve ser ignorada.
+
+> **Warning**
+> Aviso sobre potenciais problemas ou ações destrutivas.
+
+> **Caution**
+> Similar a Warning, indica necessidade de cautela.
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Markdown
+IGNORE_WHEN_COPYING_END
+
+Verifique a sintaxe exata suportada pela sua instância Mintlify (<Note>, <Tip> ou variações de blockquote > type=note).
+
+Tabelas: Use tabelas Markdown para comparar recursos, listar parâmetros ou apresentar dados estruturados.
+
+| Recurso        | Descrição                              | Módulo PowerShell  |
+|----------------|------------------------------------------|--------------------|
+| Usuários       | Gerenciamento de identidades de usuário | Microsoft.Graph    |
+| Grupos         | Agrupamento de usuários ou dispositivos  | Microsoft.Graph    |
+| Acesso Cond. | Políticas de acesso baseadas em condições | Microsoft.Graph    |
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Markdown
+IGNORE_WHEN_COPYING_END
+
+Listas: Use listas numeradas para passos sequenciais (tutoriais) e listas com marcadores para pontos-chave ou listas não ordenadas.
+
+Links: Use [texto do link](URL) para links externos (documentação oficial da Microsoft) e internos (outras páginas da sua documentação Mintlify). Incentive o cross-linking.
+
+Imagens e Diagramas: Use ![texto alternativo](caminho/para/imagem.png) para incluir screenshots (portal Azure/Entra) ou diagramas (arquitetura, fluxos). Mantenha as imagens otimizadas.
+
+Tabs: Se precisar mostrar o mesmo exemplo em diferentes linguagens (ex: API REST vs PowerShell), use o componente de Tabs do Mintlify (geralmente <Tabs> e <Tab>).
+
+Componentes Interativos (Se aplicável): Explore componentes específicos do Mintlify como acordeões (<Accordion>) para FAQs ou seções detalhadas opcionais.
+
+Estilo de Escrita e Tom:
+
+Claro e Conciso: Vá direto ao ponto. Evite jargões desnecessários ou explique-os na primeira vez que usar.
+
+Preciso: Garanta que os nomes dos serviços (Entra ID), cmdlets, parâmetros e conceitos estejam corretos e atualizados.
+
+Prático e Orientado à Ação: Foque em como fazer as coisas. Use verbos no imperativo para instruções (Ex: "Execute o comando...", "Navegue até...").
+
+Consistente: Mantenha a terminologia, formatação e estilo consistentes em toda a documentação. Use "Microsoft Entra ID" consistentemente.
+
+Atualizado: Sempre que possível, referencie as versões mais recentes das ferramentas e APIs. Mencione se algo é legado ou será descontinuado.
+
+Revisão e Validação:
+
+Precisão Técnica: Verifique todos os comandos PowerShell, exemplos de API e etapas de configuração com a documentação oficial da Microsoft e, se possível, em um ambiente de teste.
+
+Clareza: Peça para outra pessoa (ou simule ser um usuário) ler a documentação para garantir que seja compreensível.
+
+Links Quebrados: Verifique se todos os links internos e externos estão funcionando.
+
+Instrução Final para a IA: Ao gerar o conteúdo, siga estas diretrizes rigorosamente. Priorize a clareza, a precisão técnica e a formatação correta para Mintlify. Use os exemplos de sintaxe fornecidos como modelo. Sempre que houver dúvida sobre um comando ou conceito, consulte a documentação oficial da Microsoft como fonte primária, mas adapte a explicação e a formatação para este guia.
+
+Esta "rule" fornece um framework detalhado para a IA criar a documentação desejada, cobrindo o escopo técnico, a estrutura, o estilo e, crucialmente, a sintaxe específica esperada pela plataforma Mintlify.

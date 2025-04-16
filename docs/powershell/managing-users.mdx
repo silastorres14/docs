@@ -1,0 +1,80 @@
+---
+title: 'Gerenciando Usuários com PowerShell (Graph SDK)'
+description: 'Como criar, modificar e gerenciar usuários no Entra ID usando PowerShell'
+---
+
+# Gerenciando Usuários com PowerShell (Graph SDK)
+
+O módulo Microsoft.Graph.Users permite gerenciar facilmente usuários no Microsoft Entra ID através do PowerShell.
+
+## Pré-requisitos
+
+```powershell
+# Instalar o módulo e conectar ao Graph
+Install-Module Microsoft.Graph.Users -Scope CurrentUser
+Connect-MgGraph -Scopes "User.ReadWrite.All"
+```
+
+## Consultando Usuários
+
+```powershell
+# Listar todos os usuários (com paginação padrão)
+Get-MgUser
+
+# Filtrar usuários
+Get-MgUser -Filter "startsWith(displayName, 'John')"
+
+# Consultar usuário específico por ID
+Get-MgUser -UserId "john.doe@contoso.com"
+
+# Buscar propriedades específicas
+Get-MgUser -Property "id,displayName,mail,accountEnabled"
+```
+
+## Criando Usuários
+
+```powershell
+# Criar um novo usuário
+$params = @{
+    DisplayName = "Maria Silva"
+    MailNickname = "mariasilva"
+    UserPrincipalName = "maria.silva@contoso.com"
+    AccountEnabled = $true
+    PasswordProfile = @{
+        Password = "ComplexPassword123!"
+        ForceChangePasswordNextSignIn = $true
+    }
+}
+
+New-MgUser -BodyParameter $params
+```
+
+## Atualizando Usuários
+
+```powershell
+# Atualizar propriedades de um usuário
+Update-MgUser -UserId "maria.silva@contoso.com" -DisplayName "Maria Santos Silva"
+```
+
+## Removendo Usuários
+
+```powershell
+# Remover um usuário
+Remove-MgUser -UserId "user-to-remove@contoso.com"
+```
+
+## Gerenciando Licenças
+
+```powershell
+# Atribuir licença a um usuário
+$license = @{
+    AddLicenses = @(
+        @{
+            SkuId = "licenseSku-id"
+        }
+    )
+    RemoveLicenses = @()
+}
+
+Set-MgUserLicense -UserId "user@contoso.com" -BodyParameter $license
+``` 

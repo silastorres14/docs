@@ -1,0 +1,39 @@
+---
+title: 'Autenticação e Autorização com a Graph API'
+description: 'Como obter tokens e definir permissões para acessar a Microsoft Graph API'
+---
+
+# Autenticação e Autorização com a Graph API
+
+Para acessar os dados no Microsoft Graph, seu aplicativo precisa adquirir um token de acesso OAuth 2.0 e apresentá-lo ao Graph em solicitações.
+
+## Modelo de Autenticação
+
+A Microsoft Graph usa o OAuth 2.0 e o OpenID Connect para autenticação. O fluxo geral é:
+
+1. Registro do aplicativo no Entra ID
+2. Obtenção de um token de acesso da plataforma de identidade da Microsoft
+3. Uso do token para chamar o Microsoft Graph
+
+## Tipos de Permissões
+
+O Microsoft Graph suporta dois tipos de permissões:
+
+### Permissões Delegadas
+
+- Usadas por aplicativos que têm um usuário conectado
+- O aplicativo age em nome do usuário
+- As permissões efetivas são a interseção das permissões concedidas ao aplicativo e os privilégios do usuário
+
+### Permissões de Aplicativo
+
+- Usadas por aplicativos que executam sem a presença de um usuário
+- Concedidas por um administrador e podem ter acesso muito amplo
+- Comumente usadas em serviços de back-end ou daemons
+
+## Consentimento
+
+Dependendo das permissões solicitadas, pode ser necessário:
+
+- **Consentimento do usuário** - Para permissões de menor privilégio
+- **Consentimento do administrador** - Para permissões sensíveis ou de escopo amplo 

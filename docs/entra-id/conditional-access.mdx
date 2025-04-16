@@ -1,0 +1,34 @@
+---
+title: 'Acesso Condicional (Conditional Access)'
+description: 'Implementando políticas de acesso contextual com Microsoft Entra ID'
+---
+
+# Acesso Condicional (Conditional Access)
+
+O Acesso Condicional é um recurso fundamental do Microsoft Entra ID que permite controlar o acesso a recursos corporativos com base em condições específicas.
+
+## O que é Acesso Condicional?
+
+O Acesso Condicional é a ferramenta usada pelo Entra ID para reunir sinais, tomar decisões e aplicar políticas organizacionais. Ele vai além da autenticação simples, adicionando verificações contextuais antes de conceder acesso.
+
+## Sinais comuns avaliados
+
+O Acesso Condicional avalia sinais como:
+
+- **Identidade do usuário ou grupo**
+- **Localização** - IP, país/região, marcada como confiável
+- **Dispositivo** - Gerenciado, compatível, juntado ao domínio
+- **Aplicativo** - Sensibilidade, padrões de uso
+- **Risco** - Sinais de risco do usuário e da sessão
+
+## Decisões comuns
+
+Com base nos sinais, o Acesso Condicional pode:
+
+- **Bloquear acesso**
+- **Conceder acesso** - Possivelmente exigindo:
+  - Autenticação multifator (MFA)
+  - Dispositivo marcado como compatível
+  - Dispositivo juntado ao Entra ID 
+  - Aplicativo cliente aprovado
+  - Termos de uso aprovados 
