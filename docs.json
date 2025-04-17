@@ -36,25 +36,7 @@
           {
             "group": "Documentação",
             "pages": [
-              "docs/index",
-              {
-                "group": "Microsoft Entra ID",
-                "pages": [
-                  "docs/entra-id/overview"
-                ]
-              },
-              {
-                "group": "Microsoft Graph API",
-                "pages": [
-                  "docs/graph-api/introduction"
-                ]
-              },
-              {
-                "group": "PowerShell para IAM",
-                "pages": [
-                  "docs/powershell/graph-sdk-setup"
-                ]
-              }
+              "docs/index"
             ]
           },
           {
@@ -67,6 +49,29 @@
             "group": "Artigos",
             "pages": [
               "articles/index"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api-reference/introduction",
+              {
+                "group": "Endpoints",
+                "pages": [
+                  "api-reference/endpoint/get"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Essentials",
+            "pages": [
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images",
+              "essentials/reusable-snippets"
             ]
           }
         ]
