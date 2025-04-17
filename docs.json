@@ -40,35 +40,21 @@
               {
                 "group": "Microsoft Entra ID",
                 "pages": [
-                  "docs/entra-id/overview",
-                  "docs/entra-id/users-and-groups",
-                  "docs/entra-id/conditional-access",
-                  "docs/entra-id/identity-governance"
+                  "docs/entra-id/overview"
                 ]
               },
               {
                 "group": "Microsoft Graph API",
                 "pages": [
-                  "docs/graph-api/introduction",
-                  "docs/graph-api/authentication",
-                  "docs/graph-api/common-queries"
+                  "docs/graph-api/introduction"
                 ]
               },
               {
                 "group": "PowerShell para IAM",
                 "pages": [
-                  "docs/powershell/graph-sdk-setup",
-                  "docs/powershell/managing-users",
-                  "docs/powershell/managing-groups"
+                  "docs/powershell/graph-sdk-setup"
                 ]
               }
-            ]
-          },
-          {
-            "group": "Princípios",
-            "pages": [
-              "principles/index",
-              "principles/identity-basics"
             ]
           },
           {
