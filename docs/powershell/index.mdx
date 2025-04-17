@@ -1,0 +1,47 @@
+# PowerShell para Gestão de Identidades
+
+O PowerShell é uma ferramenta fundamental para administradores de TI que trabalham com o ecossistema Microsoft, oferecendo capacidades poderosas para automatizar tarefas de gestão de identidades e acessos.
+
+## Visão Geral
+
+Esta seção da documentação concentra-se na utilização do PowerShell para gerir identidades e acessos no Microsoft Entra ID, com foco especial no módulo Microsoft.Graph.PowerShell, que é a interface PowerShell moderna para o Microsoft Graph API.
+
+## Módulos PowerShell para IAM
+
+### Microsoft.Graph PowerShell SDK
+
+O Microsoft Graph PowerShell SDK é a abordagem recomendada para interagir com recursos do Microsoft Entra ID através do PowerShell. Este SDK oferece um conjunto completo de cmdlets que mapeiam diretamente para as APIs do Microsoft Graph.
+
+```powershell
+# Instalar o módulo principal de autenticação
+Install-Module Microsoft.Graph.Authentication -Scope CurrentUser
+
+# Exemplo de outros módulos específicos que podem ser necessários
+Install-Module Microsoft.Graph.Users -Scope CurrentUser
+Install-Module Microsoft.Graph.Groups -Scope CurrentUser
+Install-Module Microsoft.Graph.Applications -Scope CurrentUser
+```
+
+### Módulos Legados
+
+> **Note**
+> Os módulos AzureAD e MSOnline são considerados legados e estão a ser substituídos pelo Microsoft.Graph PowerShell SDK. Recomenda-se utilizar o Microsoft.Graph para novos desenvolvimentos.
+
+Para referência, os módulos legados incluem:
+
+- **AzureAD** - Uma versão anterior para gerir o Azure AD (agora Entra ID)
+- **MSOnline** - O módulo original para gestão do Azure AD, que ainda é necessário para alguns cenários específicos não cobertos pelos outros módulos
+
+## Exemplos e Guias
+
+Esta seção inclui diversos guias e exemplos práticos para ajudar a implementar soluções de gestão de identidades com PowerShell:
+
+- [Monitorização de Credenciais Expiradas](./app-credentials-report) - Script para identificar segredos e certificados de aplicações que estão prestes a expirar
+
+## Recursos de Aprendizagem
+
+Para aprofundar seus conhecimentos em PowerShell para gestão de identidades, consulte:
+
+- [Documentação oficial do Microsoft Graph PowerShell SDK](https://learn.microsoft.com/powershell/microsoftgraph/overview)
+- [Microsoft Learn - Módulos de treinamento em PowerShell](https://learn.microsoft.com/training/browse/?terms=PowerShell)
+- [Documentação do Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals) 

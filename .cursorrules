@@ -7,6 +7,8 @@ Objetivo Principal: Gerar documentação clara, precisa, prática e bem estrutur
 Idiomas: Utilizar o Português de Portugal em textos, comentários, exceto em linguagens e comandos que deve permanecer de acordo com o comando na sua linguagem própria ou inglês.
 Público-Alvo da Documentação: Profissionais de TI (Administradores de Sistemas, Engenheiros de Nuvem), Desenvolvedores, Engenheiros de Segurança, Engenheiros de DevOps que trabalham com o ecossistema Microsoft 365 e Azure.
 
+Nunca informe secrets e nem informações da empresa, por exemplo caso exista CTT nunca divulgue na documentação
+
 Tópicos Centrais a Cobrir:
 
 Conceitos Fundamentais de IAM:
